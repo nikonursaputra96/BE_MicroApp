@@ -1,0 +1,30 @@
+[
+    {
+        "id" : 1,
+        "Nama" : "Sugeng No Pants",
+        "Alamat" : "Cileungsi",
+        "Jenis Kelamin" : "Laki Laki",
+        "Paslon" : "Paloh"
+    },
+    {
+        "id" : 2,
+        "Nama" : "Haris Gams",
+        "Alamat" : "Serang",
+        "Jenis Kelamin" : "Perempuan",
+        "Paslon" : "Surya"
+    },
+    {
+        "id" : 3,
+        "Nama" : "Azis Union",
+        "Alamat" : "Bekasi",
+        "Jenis Kelamin" : "Laki Laki",
+        "Paslon" : "Cintara"
+    },  
+    {
+        "id" : 4,
+        "Nama" : "Lae Tanjung Balai",
+        "Alamat" : "Tanjung Balai",
+        "Jenis Kelamin" : "Laki Laki",
+        "Paslon" : "Paloh"
+    }  
+]

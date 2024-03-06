@@ -1,0 +1,21 @@
+[
+    {
+        "image" : "/img/monkeycard.png",
+        "nama" : "SURYA SURYA",
+        "akumulasi" : "45%",
+        "jumlahvote" : "117 Voters"
+    },
+    {
+        "image" : "/img/monkeycard.png",
+        "nama" : "SURYA SURYA",
+        "akumulasi" : "75%",
+        "jumlahvote" : "300 Voters"
+    },  
+    {
+        "image" : "/img/monkeycard.png",
+        "nama" : "SURYA SURYA",
+        "akumulasi" : "45%",
+        "jumlahvote" : "117 Voters"
+    }
+
+]

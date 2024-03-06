@@ -1,0 +1,23 @@
+[
+    {
+        "id" : 1,
+        "image" : "/img/monkeycard.png",
+        "name" : "CINTARA SURYA PALOH",
+        "vismis" : "Memindahkan Indonesia ke Isekai",
+        "partai" : ["Partai persatuan monyet", "Partai sapi perah indonesia", "Partai pisang masak"]
+    },
+    {
+        "id" : 2,
+        "image" : "/img/monkeycard.png",
+        "name" : "SURYA",
+        "vismis" : "Memindahkan Indonesia ke Isekai",
+        "partai" : ["Partai persatuan monyet", "Partai sapi perah indonesia", "Partai pisang masak"]
+    },
+    {
+        "id" : 3,
+        "image" : "/img/monkeycard.png",
+        "name" : "CINTARA SURYA PALOH",
+        "vismis" : "Memindahkan Indonesia ke Isekai",
+        "partai" : ["Partai persatuan monyet", "Partai sapi perah indonesia", "Partai pisang masak"]
+    }
+]
