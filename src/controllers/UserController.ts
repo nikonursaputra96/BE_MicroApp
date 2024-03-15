@@ -31,4 +31,39 @@ export default new class UserController {
         }
     }
 
+    async catch (req: Request , res: Response) : Promise<Response> {
+        try {
+            const userId = parseInt(req.params.userId)
+            const find = await UserService.catch(userId)
+
+            if (!find) {
+                return res.status(404).json({message : 'userId not found!'})
+            }
+            return res.status(201).json(find)
+        } catch (error) {
+            return res.status(500).json({message : error})
+        }
+    }
+
+    async delete (req : Request, res: Response) : Promise<Response> {
+        try {
+            const userId = parseInt(req.params.userId)
+            const del = await UserService.delete(userId)
+
+            return res.status(202).json({message : 'Remove Success'})
+        } catch (error) {
+            return res.status(500).json({message : error})
+        }
+    }
+
+    async update (req: Request, res: Response) : Promise<Response> {
+        try {
+            const userId = parseInt(req.params.userId)
+            const update = await UserService.update(req.body, userId)
+
+            return res.status(202).json({message: 'Success Updating Data!'})
+        } catch ( error) {
+            return res.status(500).json({message: error})
+        }
+    }
 }

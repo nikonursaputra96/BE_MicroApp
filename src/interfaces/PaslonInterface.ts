@@ -1,8 +1,8 @@
 export default interface IPaslon {
     idPaslon : number;
-    nama : string;
-    norut: number;
+    name : string;
+    number: number;
     vismis: string[];
-    koalisi: string[];
+    coalition: string[];
     image: string;
 }

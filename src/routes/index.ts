@@ -9,6 +9,9 @@ const Route = express.Router()
 
 Route.post('/user', UserController.create)
 Route.get('/users', UserController.find)
+Route.get('/users/:userId', UserController.catch)
+Route.delete('/users/:userId', UserController.delete)
+Route.put('/users/:userId', UserController.update)
 
 Route.post('/blog', BlogController.create)
 Route.get('/blogs', BlogController.find)

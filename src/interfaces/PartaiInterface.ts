@@ -1,9 +1,10 @@
+
 export default interface IPartai {
     idPartai: number;
-    nama : string;
-    norut: number;
-    ketum: string;
+    name : string;
+    number: number;
+    chairman: string;
     vismis: string[];
-    alamat: string;
+    address: string;
     image: string;
 }

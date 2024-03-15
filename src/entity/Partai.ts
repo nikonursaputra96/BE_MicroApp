@@ -8,19 +8,19 @@ export class Partai {
     idPartai: number
 
     @Column()
-    nama: string
+    name: string
 
     @Column()
-    norut: number
+    number: number
 
     @Column()
-    ketum: string
+    chairman: string
 
     @Column("simple-array")
     vismis: string[]
 
     @Column()
-    alamat: string
+    address: string
 
     @Column()
     image: string

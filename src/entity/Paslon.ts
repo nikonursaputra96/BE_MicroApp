@@ -8,16 +8,16 @@ export class Paslon {
     idPaslon: number
 
     @Column()
-    nama: string
+    name: string
 
     @Column()
-    norut: number
+    number: number
 
     @Column("simple-array")
     vismis: string[]
 
     @Column("simple-array")
-    koalisi: string[]
+    coalition: string[]
 
     @Column()
     image: string

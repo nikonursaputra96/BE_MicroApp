@@ -9,10 +9,10 @@ export default new class PaslonServce {
 
             const paslon = repository.create ({
                 idPaslon: reqBody.idPaslon,
-                nama: reqBody.nama,
-                norut: reqBody.norut,
+                name: reqBody.name,
+                number: reqBody.number,
                 vismis: reqBody.vismis,
-                koalisi: reqBody.koalisi,
+                coalition: reqBody.coalition,
                 image: reqBody.image
             })
 

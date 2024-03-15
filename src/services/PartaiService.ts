@@ -1,4 +1,3 @@
-import { error } from "console";
 import { AppDataSource } from "../data-source";
 import { Partai } from "../entity/Partai";
 import IPartai from "../interfaces/PartaiInterface";
@@ -7,15 +6,15 @@ export default new class PartaiService {
     async create(reqBody: IPartai) : Promise<IPartai> {
         try {  
 
-            const repository = await AppDataSource.getRepository(Partai)
+            const repository =  AppDataSource.getRepository(Partai)
 
             const partai = repository.create ({
                 idPartai: reqBody.idPartai,
-                nama: reqBody.nama,
-                norut: reqBody.norut,
-                ketum: reqBody.ketum,
+                name: reqBody.name,
+                number: reqBody.number,
+                chairman: reqBody.chairman,
                 vismis: reqBody.vismis,
-                alamat: reqBody.alamat,
+                address: reqBody.address,
                 image: reqBody.image
             })
 

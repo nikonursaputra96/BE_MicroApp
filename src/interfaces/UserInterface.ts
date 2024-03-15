@@ -4,7 +4,7 @@ export default interface IUser{
     username: string;
     password: string;
     fullname: string;
-    role : string;
-    alamat: string;
-    jeniskelamin: string;
+    role?: string;
+    address: string;
+    gender: string;
 }
