@@ -37,10 +37,50 @@ export default new class PaslonServce {
         try {
              const paslons = await AppDataSource
              .getRepository(Paslon)
-             .createQueryBuilder('paslons')
+             .createQueryBuilder('paslon')
              .getMany()
 
              return paslons
+        } catch (error) {
+            throw error
+        }
+    }
+
+    async update(reqBody: any , idPaslon: number) : Promise<any> {
+        try {
+            const repository = AppDataSource.getRepository(Paslon)
+            const paslon = repository.create ({
+                name: reqBody.name,
+                number: reqBody.number,
+                vismis: reqBody.vismis,
+                coalition: reqBody.coalition,
+                image: reqBody.image
+            })
+
+            await AppDataSource
+            .getRepository(Paslon)
+            .createQueryBuilder()
+            .update(Paslon)
+            .set(paslon)
+            .where({idPaslon})
+            .execute()
+
+        } catch (error) {
+            throw error
+        }
+    }
+
+    async delete (idPaslon : number) : Promise<any> {
+        try {
+            const paslon = await AppDataSource
+            .getRepository(Paslon)
+            .createQueryBuilder()
+            .delete()
+            .from(Paslon)
+            .where({idPaslon})
+            .execute()
+
+            return paslon
         } catch (error) {
             throw error
         }

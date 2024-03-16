@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn, CreateDateColumn, UpdateDateColumn } from "typeorm"
+ import { Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn, CreateDateColumn, UpdateDateColumn } from "typeorm"
 import { User } from "./User"
 import { Paslon } from "./Paslon"
 
@@ -8,11 +8,11 @@ export class Vote {
     @PrimaryGeneratedColumn()
     idVote: number
 
-    @OneToOne (() => User)
+    @OneToOne (() => User, (user) => user.userId)
     @JoinColumn()
     user: User
 
-    @OneToOne (() => Paslon)
+    @OneToOne (() => Paslon, (paslon) => paslon.idPaslon)
     @JoinColumn()
     paslon: Paslon
 

@@ -10,7 +10,7 @@ export class Blog {
     @Column()
     title: string
 
-    @Column()
+    @Column({nullable:true})
     author: string
 
     @Column()

@@ -32,4 +32,26 @@ export default new class PartaiController {
         }
 
     }
+
+    async update (req: Request, res: Response) : Promise<Response> {
+        try {
+            const idPartai = parseInt(req.params.idPartai)
+            const partai = await PartaiService.update(req.body, idPartai)
+
+            return res.status(201).json({message : 'Success Updating Data !!'})
+        } catch (error) {
+            return res.status(500).json({message : error})
+        }
+    }
+
+    async delete (req:Request, res:Response) : Promise<Response> {
+        try {
+            const idPartai = parseInt(req.params.idPartai)
+            const del = await PartaiService.delete(idPartai)
+
+            return res.status(201).json({message : 'Remove Success'})
+        } catch (error) {
+            return res.status(500).json({message : error})
+        }
+    }
 }

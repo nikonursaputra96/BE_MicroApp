@@ -15,9 +15,31 @@ export default new class VoteController {
 
     async find (req: Request, res: Response) : Promise<Response> {
         try {
-            const vote = VoteService.find()
+            const votes = await VoteService.find()
 
-            return res.status(201).json(vote)
+            return res.status(201).json(votes)
+        } catch (error) {
+            return res.status(500).json({message : error})
+        }
+    }
+
+    async update( req:Request, res: Response) : Promise<Response> {
+        try {
+            const idVote = parseInt(req.params.idVote)
+            const vote = await VoteService.update(req.body, idVote)
+
+            return res.status(201).json({message : 'Success Updating Data !!'})
+        } catch (error) {
+            return res.status(500).json({message : error})
+        }
+    }
+
+    async delete (req:Request, res: Response) : Promise<any> {
+        try {
+            const idVote = parseInt(req.params.idVote)
+            const del = await VoteService.delete(idVote)
+
+            return res.status(201).json({message : 'Remove Success'})
         } catch (error) {
             return res.status(500).json({message : error})
         }

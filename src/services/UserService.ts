@@ -48,7 +48,7 @@ export default new class UserService {
         }
     }
 
-    // Catch data
+    // Catch One data
     async catch(userId: number) : Promise<IUser> {
         try {
             const user = await AppDataSource
@@ -63,6 +63,7 @@ export default new class UserService {
         }
     }
 
+    // delete data
     async delete (userId: number): Promise<any> {
         try {
             const users = await AppDataSource
@@ -79,6 +80,7 @@ export default new class UserService {
         }
     }
 
+    // Update data
     async update (reqBody: IUser, userId:number) : Promise<any> {
         try {
             const repository = AppDataSource.getRepository(User)

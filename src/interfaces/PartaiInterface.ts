@@ -7,4 +7,5 @@ export default interface IPartai {
     vismis: string[];
     address: string;
     image: string;
+    paslon: any;
 }

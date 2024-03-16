@@ -7,5 +7,6 @@ export const PartaiValidator = Joi.object ({
     vismis: Joi.array().items(Joi.string()).required(),
     address: Joi.string().required(),
     image: Joi.string().required(),
+    paslon: Joi.number().optional().allow(null)
 
 }) 
