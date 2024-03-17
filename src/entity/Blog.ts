@@ -16,6 +16,9 @@ export class Blog {
     @Column()
     date: string
 
+    @Column()
+    image: string
+
     @Column("simple-array")
     content: string[]
 

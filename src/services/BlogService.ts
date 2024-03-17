@@ -20,6 +20,7 @@ export default new class BlogService {
                 idBlog: reqBody.idBlog,
                 title: reqBody.title,
                 author: user.fullname,
+                image: reqBody.image,
                 date: reqBody.date,
                 content: reqBody.content,
                 user: user
